@@ -60,7 +60,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(./images/pattern-background-mobile.svg);
+  background-image: url(../images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
@@ -69,7 +69,7 @@ main {
 
 @media (min-width: 1120px) {
   main {
-    background-image: url(./images/pattern-background-desktop.svg);
+    background-image: url(../images/pattern-background-desktop.svg);
   }
 }
 
@@ -83,7 +83,7 @@ main .container {
 }
 
 main .container .container-bg {
-  background-image: url(./images/illustration-hero.svg);
+  background-image: url(../images/illustration-hero.svg);
   background-size: cover;
   background-position: center;
   border-top-right-radius: 2rem;

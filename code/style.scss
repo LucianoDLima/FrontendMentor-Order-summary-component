@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import "_reset.scss";
+@import "_root.scss";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $fs;
+    font-family: $fm;
+    background-color: $paleBlue-100;
+}
+
+main {
+    @include center(column);
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 100vh;
+
+    @media (min-width:1120px) {
+        background-image: url(/images/pattern-background-desktop.svg);
+    }
+
+    .container {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: $radius;
+        min-width: 27rem;
+        max-width: 35rem;
+        box-shadow: 0 0 10px 2px hsla(0, 0, 0, .1);
+    
+        .container-bg {
+            background-image: url(/images/illustration-hero.svg);
+            background-size: cover;
+            background-position: center;
+    
+            border-top-right-radius: $radius;
+            border-top-left-radius: $radius;
+            max-width: 100%;
+            min-height: 17rem;
+            margin-bottom: 2rem;
+        }
+
+        .container-body {
+            padding-inline: 2rem;
+
+            .main-text {
+            margin-bottom: 2rem;
+
+                h1 {
+                    text-align: center;
+                    // white-space: nowrap;
+                    margin-bottom: 2rem;
+                }
+    
+                p {
+                    text-align: center;
+                    color: $desaturatedBlue;
+                }
+            }
+
+            .subscription-plans {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $paleBlue-200;
+                padding: 1.5rem;
+                border-radius: 2rem;
+                margin-bottom: 2rem;
+
+                .sub-plans-left {
+                    display: flex;
+                    gap: 1.5rem;
+                    
+                    strong {
+                        font-weight: 900;
+                    }
+
+                    span {
+                        color: $desaturatedBlue;
+                    }
+                }
+
+                .sub-plans-right {
+
+                    a {
+                        font-weight: 700;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+
+            .payment-buttons {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 3rem;
+                text-align: center;
+                gap: 1rem;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .button-proceed {
+                    background-color: $brightBlue;
+                    color: white;
+                    padding-block: 1rem;
+                    border-radius: 1rem;
+                    transition: all 150ms ease;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+
+                .button-cancel {
+                    padding-block: 1rem;
+                    transition: all 150ms ease;
+
+                    &:hover {
+                        color: $darkBlue;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $desaturatedBlue;
+        font-size: calc(#{$fs} + .35rem);
+
+        &:hover {
+            color: $brightBlue;
+            text-decoration: underline;
+        }
+    }
+}

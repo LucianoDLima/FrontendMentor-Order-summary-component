@@ -40,7 +40,7 @@ main {
             border-top-left-radius: $radius;
             max-width: 100%;
             min-height: 17rem;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
         }
 
         .container-body {
@@ -53,6 +53,8 @@ main {
                     text-align: center;
                     // white-space: nowrap;
                     margin-bottom: 2rem;
+                    font-weight: 900;
+                    color: $darkBlue;
                 }
     
                 p {
